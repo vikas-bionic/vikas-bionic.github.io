@@ -23,10 +23,14 @@ Alongside my research, I have a strong academic foundation, having secured top n
 * **Structural Biology & Biophysics:** Protein-protein interactions, characterization using CD, DSC, and Microscale Thermophoresis (MST).
 * **Computational Biology:** Molecular dynamics (MD) simulations, molecular docking, and structural modeling using the Schrödinger Suite and PyMOL.
 
-## 📰 Recent News & Updates
-* **March 2026:** Secured **All India Rank 75** in GATE Life Sciences and **All India Rank 123** in GATE Biotechnology.
-* **January 2026:** Our pre-print titled *"Exploring differential interactional preferences of enzyme-bearing dockerins for cohesin domains..."* is now live on bioRxiv!
-* **July 2025:** Achieved **All India Rank 21** in the CSIR-UGC NET (Life Sciences).
+## 🏆 Key Milestones
+
+| Milestone | Metric | Status |
+| :--- | :--- | :--- |
+| **CSIR-UGC NET (Life Sciences)** | `All India Rank 21` (99.95% percentile) | 🥇 National Top |
+| **GATE XL (Life Sciences)** | `All India Rank 75` (Top 0.05%) | 🚀 Elite Tier |
+| **GATE BT (Biotechnology)** | `All India Rank 123` | 🔬 Specialized |
+| **Cellulosome Research** | `Manuscript Out for Review` | 📰 Pre-print Live |
 
 ## 🎓 Education
 * **BS-MS Dual Degree in Biological Sciences** (Minor in Data Science) | *IISER Mohali* (2021 – 2026)
