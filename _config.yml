@@ -16,7 +16,7 @@ description              : &description "Protein Engineering & Structural Biolog
 url                      : "https://vikas-bionic.github.io" 
 baseurl                  : "" 
 repository               : "https://github.com/vikas-bionic/vikas-bionic.github.io"
-
+extlinks: true
 # Site Author
 author:
   # Biographic information
