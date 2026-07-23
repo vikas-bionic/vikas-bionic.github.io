@@ -1,0 +1,16 @@
+<div class="news-widget">
+  <h3 class="news-widget__title"><i class="fas fa-bullhorn icon-pad-right" aria-hidden="true"></i>News &amp; Updates</h3>
+  <ul class="news-widget__list">
+    {% assign news_items = site.data.news | sort: "date" | reverse %}
+    {% for item in news_items limit: 4 %}
+      <li class="news-widget__item">
+        <i class="fas {{ item.icon | default: 'fa-circle-dot' }} news-widget__icon" aria-hidden="true"></i>
+        <div class="news-widget__content">
+          <a href="{{ item.url | default: '/news/' }}" class="news-widget__link">{{ item.title }}</a>
+          {% if item.date %}<span class="news-widget__date">{{ item.date | date: "%b %-d, %Y" }}</span>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="/news/" class="btn news-widget__viewall">View All</a>
+</div>
