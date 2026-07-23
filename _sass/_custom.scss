@@ -188,3 +188,7 @@ html[data-theme="dark"] .theme-switch__icon--moon {
     transform: scaleY(1);
   }
 }
+.greedy-nav .visible-links {
+  display: inline-flex;
+  align-items: center;
+}
