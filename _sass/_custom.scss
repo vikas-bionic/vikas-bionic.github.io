@@ -1,0 +1,75 @@
+/* ==========================================================================
+   CUSTOM OVERRIDES — nav, hero, sidebar bio, cards
+   ========================================================================== */
+
+/* --- Hero banner (homepage) uses theme accent instead of hardcoded color --- */
+.page__hero--overlay {
+  background-color: var(--global-base-color) !important;
+}
+
+/* --- Nav bar redesign: bolder, spaced-out, subtle accent underline --- */
+.masthead {
+  border-bottom: 2px solid var(--global-base-color);
+}
+
+.masthead__menu-item a {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  position: relative;
+}
+
+.masthead__menu-item a:hover {
+  color: var(--global-base-color) !important;
+}
+
+.masthead__menu-item.selected a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: var(--global-base-color);
+}
+
+/* --- Sidebar bio card --- */
+.author__avatar img {
+  border: 3px solid var(--global-base-color);
+  border-radius: 50%;
+}
+
+.author__content {
+  padding: 1.25em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  background-color: var(--global-code-background-color);
+}
+
+.author__name {
+  color: var(--global-base-color) !important;
+}
+
+.author__urls .social-icons a:hover {
+  color: var(--global-base-color) !important;
+}
+
+/* --- Publication / project cards --- */
+.archive__item {
+  padding: 1em 1.25em;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--global-base-color);
+  border-radius: 8px;
+  margin-bottom: 1.25em;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.archive__item-title {
+  margin-top: 0 !important;
+}
