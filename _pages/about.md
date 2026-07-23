@@ -2,6 +2,8 @@
 permalink: /
 title: "Vikas Yadav"
 excerpt: "About me"
+header:
+  overlay_color: "#000"
 author_profile: true
 redirect_from: 
   - /about/
