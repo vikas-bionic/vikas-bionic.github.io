@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                  : "en-US"
-site_theme               : "contrast" # Options: "default", "air", "sunrise", "mint", "dirt", "contrast"
+site_theme               : "earthy" # Options: "default", "air", "sunrise", "mint", "dirt", "contrast", "earthy"
 title                    : "Vikas Yadav"
 title_separator          : "|"
 name                     : &name "Vikas Yadav"
