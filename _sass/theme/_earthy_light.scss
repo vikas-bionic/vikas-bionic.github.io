@@ -1,0 +1,47 @@
+/* ==========================================================================
+    EARTHY THEME - LIGHT VERSION (warm academic: parchment + rust)
+    ========================================================================== */
+/* Color codes used for the theme */
+$primary-color              : #b5502e;
+$gray                       : #8a7d68;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
+
+/* Color codes used for the site */
+$danger-color               : #b5502e;
+$info-color                 : #4b563a;
+$notice-color               : #8a7d68;
+$success-color              : #4b7a4a;
+$warning-color              : #b5502e;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(43, 32, 21, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Earthy light theme for the site */
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #f4ede1;
+    --global-footer-bg-color            : #ece2d0;
+    --global-border-color               : #d8cbb3;
+    --global-dark-border-color          : #c2b291;
+    --global-code-background-color      : #ece2d0;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : mix(#fff, #{$dark-gray}, 25%);
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : mix(#000, #{$primary-color}, 20%);
+    --global-link-color-visited         : mix(#000, #{$primary-color}, 35%);
+    --global-masthead-link-color        : #2b2015;
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #2b2015;
+    --global-text-color-light           : #5c4c36;
+    --global-thead-color                : #e4d7bf;
+}
