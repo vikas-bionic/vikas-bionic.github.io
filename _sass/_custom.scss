@@ -38,17 +38,18 @@
   background-color: var(--global-base-color);
 }
 
-/* --- Sidebar bio card --- */
+/* --- Sidebar bio --- */
 .author__avatar img {
+  max-width: 210px;
   border: 3px solid var(--global-base-color);
   border-radius: 50%;
 }
 
 .author__content {
-  padding: 1.25em;
-  border: 1px solid var(--global-border-color);
-  border-radius: 10px;
-  background-color: var(--global-code-background-color);
+  /* plain text, no card styling — flows in line with the contact list below it */
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .author__name {
@@ -192,4 +193,80 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 .greedy-nav .visible-links {
   display: inline-flex;
   align-items: center;
+}
+
+/* --- News & Updates widget ---
+   Sits stacked (full width) below the page content on small/medium screens.
+   On large screens it moves into the reserved right-hand gutter next to the
+   article text (the .page layout only uses 10 of 12 columns, leaving the
+   remaining 2 columns empty — this widget occupies that space). */
+#main {
+  position: relative;
+}
+
+.news-widget-wrap {
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  @include breakpoint($large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17%;
+    margin-top: 0;
+  }
+}
+
+.news-widget__title {
+  font-size: $type-size-5;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--global-base-color);
+}
+
+.news-widget__list {
+  list-style: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.news-widget__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news-widget__icon {
+  color: var(--global-base-color);
+  margin-top: 0.2em;
+  flex-shrink: 0;
+}
+
+.news-widget__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-widget__link {
+  font-size: $type-size-6;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.news-widget__date {
+  font-size: $type-size-7;
+  color: var(--global-text-color-light, gray);
+  margin-top: 0.2em;
+}
+
+.news-widget__viewall {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
