@@ -7,7 +7,7 @@
 # server process.
 
 # Navbar interactive icon: cat | dna | robot | emoji
-nav_icon: "emoji"
+nav_icon: "cat"
 
 # Basic Site Settings
 locale                  : "en-US"
