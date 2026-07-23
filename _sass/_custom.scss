@@ -2,9 +2,13 @@
    CUSTOM OVERRIDES — nav, hero, sidebar bio, cards
    ========================================================================== */
 
-/* --- Hero banner (homepage) uses theme accent instead of hardcoded color --- */
-.page__hero--overlay {
-  background-color: var(--global-base-color) !important;
+/* --- Bold accented page title (safe alternative to hero banner) --- */
+.page__title {
+  font-size: 2.5em;
+  color: var(--global-base-color);
+  border-bottom: 3px solid var(--global-base-color);
+  padding-bottom: 0.2em;
+  display: inline-block;
 }
 
 /* --- Nav bar redesign: bolder, spaced-out, subtle accent underline --- */
