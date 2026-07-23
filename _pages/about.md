@@ -23,5 +23,5 @@ Please feel free to explore my CV to learn more about my background, research sk
 * **Application of AI in Biology**
 * **Structural Biology & Biophysics** 
 * **Computational Biology**
-***And anything that interets me***
+* ***And anything that interets me***
 
