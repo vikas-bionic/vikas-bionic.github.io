@@ -26,16 +26,16 @@ author:
   avatar           : "profile.png" # Make sure your image file in /images/ is exactly named profile.png
   name             : "Vikas Yadav"
   pronouns         : 
-  bio              : "Protein Engineering & Computational Biology | BS-MS Student at IISER Mohali"
-  location         : "Mohali, India"
-  employer         : "IISER Mohali"
-  uri              : "https://vikas-bionic.github.io"
+  bio              : "Protein Engineering & Computational Biology | BS-MS Graduate"
+  location         : 
+  employer         : "IISER Mohali, India"
+  uri              : 
   email            : "vkysos893@gmail.com" 
 
   # Academic websites
   academia         : 
   arxiv            : 
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : 
   inspire-hep      : 
   impactstory      : 
   orcid            : "https://orcid.org/0009-0008-0423-1240"
@@ -50,7 +50,7 @@ author:
   bitbucket        : 
   codepen          : 
   dribbble         : 
-  github           : "vikas-bionic"
+  github           : 
   kaggle           :   
   stackoverflow    :     
 
