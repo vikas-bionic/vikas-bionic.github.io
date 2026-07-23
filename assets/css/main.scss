@@ -37,3 +37,82 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+/* ==========================================================================
+   GOLD & BLACK THEME OVERRIDES FOR VIKAS YADAV
+   ========================================================================== */
+
+/* Dark background and high-contrast text */
+body, 
+.page__content, 
+.sidebar, 
+.masthead {
+  background-color: #0c0c0c !important; /* Pitch black */
+  color: #e0e0e0 !important;             /* Crisp off-white text */
+}
+
+/* Gold links and hover effects */
+a {
+  color: #d4af37 !important; /* Classic metallic gold */
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #f3e5ab !important; /* Soft champagne gold on hover */
+  text-decoration: underline;
+}
+
+/* Header & Navigation Bar */
+.masthead {
+  border-bottom: 2px solid #d4af37 !important; /* Gold divider line under nav */
+}
+
+.greedy-nav a {
+  color: #f3e5ab !important;
+}
+
+.greedy-nav a:hover {
+  color: #ffffff !important;
+}
+
+/* Sidebar Profile Styling */
+.author__avatar img {
+  border: 2px solid #d4af37 !important; /* Gold ring around profile photo */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.author__name {
+  color: #d4af37 !important;
+}
+
+.author__urls a {
+  color: #d4af37 !important;
+}
+
+/* Headings (H1, H2, H3) */
+h1, h2, h3, h4, h5, h6, 
+.page__title {
+  color: #d4af37 !important;
+  border-bottom-color: #2a2a2a !important;
+}
+
+/* Buttons (e.g., CV download, Paper links) */
+.btn--primary, 
+.btn--info,
+.btn {
+  background-color: #d4af37 !important;
+  color: #000000 !important; /* Dark text on gold button */
+  font-weight: bold;
+  border: none !important;
+}
+
+.btn:hover {
+  background-color: #f3e5ab !important;
+  color: #000000 !important;
+}
+
+/* Code blocks & Callout cards */
+code, pre, .notice, .notice--info {
+  background-color: #1a1a1a !important;
+  border-left: 4px solid #d4af37 !important;
+  color: #e0e0e0 !important;
+}
