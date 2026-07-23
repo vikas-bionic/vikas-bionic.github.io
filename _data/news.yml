@@ -13,36 +13,26 @@
 # on the full /news/ page.
 
 - title: "Manuscript on cellulosome engineering submitted for review"
-  date: 2026-01-19
+  date: 2026-06-15
   url: /news/
   icon: fa-file-lines
 
 - title: "Awarded All India Rank 21 in CSIR-UGC NET (99.95 percentile)"
-  date: 2025-08-17
+  date: 2026-03-10
   url: /news/
   icon: fa-trophy
 
-- title: "Secured All India Rank 75 in GATE 2026 Life Sciences"
-  date: 2026-05-20
-  url: /news/
-  icon: fa-medal
-  
-  - title: "Secured All India Rank 123 in GATE 2026 Biotechnology"
-  date: 2026-05-20
+- title: "Secured All India Rank 75 in GATE Life Sciences"
+  date: 2026-02-20
   url: /news/
   icon: fa-medal
 
-- title: "Graduated from IISER Mohali"
-  date: 2026-06-16
+- title: "Started industry collaboration on AI-driven enzyme design"
+  date: 2026-01-05
   url: /news/
-  icon: fa-microscope
+  icon: fa-flask
 
-- title: "Secured All India Rank 158 in GATE Life Science 2025"
-  date: 2025-05-18
-  url: /news/
-  icon: fa-microscope
-
-- title: "MS Thesis submitted"
-  date: 2026-05-25
+- title: "Presented poster on plastic-degrading enzyme engineering"
+  date: 2025-11-12
   url: /news/
   icon: fa-microscope
