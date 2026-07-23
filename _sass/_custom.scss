@@ -135,3 +135,23 @@ html[data-theme="dark"] .theme-switch__icon--sun {
 html[data-theme="dark"] .theme-switch__icon--moon {
   color: #14100a;
 }
+.masthead__tagline {
+  width: 100%;
+  padding: 0 1.5em;
+  font-family: $caption-font-family;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.8em;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@include breakpoint(max-width $medium) {
+  .masthead__tagline {
+    display: none;
+  }
+}
