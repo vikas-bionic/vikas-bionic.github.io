@@ -1,0 +1,38 @@
+# News & Updates
+# ---------------
+# Add one entry per update. Newest-first ordering is handled automatically
+# by date, so you can add entries in any order.
+#
+# Fields:
+#   title : the headline text shown in the widget (keep it short)
+#   date  : YYYY-MM-DD, used for sorting and display
+#   url   : where the item links to (a post, an external link, or /news/)
+#   icon  : any Font Awesome 6 solid icon name (without "fa-" prefix... include it), e.g. fa-trophy
+#
+# Only the first 4 (by date) show in the homepage widget. All of them show
+# on the full /news/ page.
+
+- title: "Manuscript on cellulosome engineering submitted for review"
+  date: 2026-06-15
+  url: /news/
+  icon: fa-file-lines
+
+- title: "Awarded All India Rank 21 in CSIR-UGC NET (99.95 percentile)"
+  date: 2026-03-10
+  url: /news/
+  icon: fa-trophy
+
+- title: "Secured All India Rank 75 in GATE Life Sciences"
+  date: 2026-02-20
+  url: /news/
+  icon: fa-medal
+
+- title: "Started industry collaboration on AI-driven enzyme design"
+  date: 2026-01-05
+  url: /news/
+  icon: fa-flask
+
+- title: "Presented poster on plastic-degrading enzyme engineering"
+  date: 2025-11-12
+  url: /news/
+  icon: fa-microscope
