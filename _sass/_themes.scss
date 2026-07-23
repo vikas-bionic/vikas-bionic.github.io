@@ -1,4 +1,28 @@
 /* ==========================================================================
+   BLACK & GOLD ACADEMIC THEME
+   ========================================================================== */
+
+/* Core background and primary text */
+$background-color: #0d0d0d !default;       /* Deep rich black */
+$text-color: #e6e6e6 !default;             /* Off-white for high contrast reading */
+$muted-text-color: #a0a0a0 !default;       /* Light gray for secondary text */
+
+/* Golden accents */
+$primary-color: #d4af37 !default;          /* Classic metallic gold */
+$accent-color: #f3e5ab !default;           /* Warm soft gold / champagne */
+$link-color: #d4af37 !default;             /* Gold links */
+$link-color-hover: #f5d77f !default;       /* Lighter gold on hover */
+$link-color-visited: #b89628 !default;     /* Slightly darker gold */
+
+/* Borders, dividers, and card backgrounds */
+$border-color: #2a2a2a !default;           /* Subtle dark gray borders */
+$code-background-color: #1a1a1a !default;  /* Dark gray code/block backgrounds */
+$lighter-gray: #1a1a1a !default;          /* Used for table headers & callouts */
+$dark-gray: #e6e6e6 !default;
+
+/* Sidebar / Profile styling */
+$author-bg-color: #141414 !default;        /* Dark background for profile card */
+/* ==========================================================================
    SHARED THEME SETTINGS
    ========================================================================== */
 
@@ -101,4 +125,3 @@ $vimeo-color                : #1ab7ea;
 $vine-color                 : #00bf8f;
 $youtube-color              : #bb0000;
 $xing-color                 : #006567;
-   
