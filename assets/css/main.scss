@@ -12,8 +12,7 @@
     "vendor/breakpoint/breakpoint",
 
     "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+    "theme/contrast_dark",
 
     "include/mixins",
     "vendor/susy/susy",
@@ -37,6 +36,7 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
 /* ==========================================================================
    GOLD & BLACK THEME OVERRIDES FOR VIKAS YADAV
    ========================================================================== */
@@ -45,7 +45,8 @@
 body, 
 .page__content, 
 .sidebar, 
-.masthead {
+.masthead,
+.page__footer {
   background-color: #0c0c0c !important; /* Pitch black */
   color: #e0e0e0 !important;             /* Crisp off-white text */
 }
@@ -64,6 +65,11 @@ a:hover {
 /* Header & Navigation Bar */
 .masthead {
   border-bottom: 2px solid #d4af37 !important; /* Gold divider line under nav */
+  background-color: #0c0c0c !important;
+}
+
+.greedy-nav {
+  background-color: #0c0c0c !important;
 }
 
 .greedy-nav a {
