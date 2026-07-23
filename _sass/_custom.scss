@@ -270,3 +270,23 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   width: 100%;
   text-align: center;
 }
+/* --- Slim footer bar (Follow/GitHub/Feed section removed, just copyright + last updated) --- */
+.page__footer {
+  margin-top: 1.5em;
+
+  footer {
+    margin-top: 0;
+    padding: 0.75em 1em;
+  }
+}
+
+.page__footer-copyright {
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* --- Justified body text across the site --- */
+.page__content p,
+.archive__item-excerpt {
+  text-align: justify;
+}
