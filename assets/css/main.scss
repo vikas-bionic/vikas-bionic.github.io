@@ -2,10 +2,7 @@
 ---
 
 /*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * Main SCSS file for Vikas Yadav Academic Profile
  */
 
 @import
@@ -38,87 +35,116 @@
 ;
 
 /* ==========================================================================
-   GOLD & BLACK THEME OVERRIDES FOR VIKAS YADAV
+   DEFAULT / DARK THEME (BLACK & GOLD)
    ========================================================================== */
-
-/* Dark background and high-contrast text */
 body, 
-.page__content, 
-.sidebar, 
-.masthead,
-.page__footer {
-  background-color: #0c0c0c !important; /* Pitch black */
-  color: #e0e0e0 !important;             /* Crisp off-white text */
-}
-
-/* Gold links and hover effects */
-a {
-  color: #d4af37 !important; /* Classic metallic gold */
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color: #f3e5ab !important; /* Soft champagne gold on hover */
-  text-decoration: underline;
-}
-
-/* Header & Navigation Bar */
-.masthead {
-  border-bottom: 2px solid #d4af37 !important; /* Gold divider line under nav */
+:root,
+html:not(.light) {
+  /* Pitch Black Background & Off-White Text */
   background-color: #0c0c0c !important;
-}
-
-.greedy-nav {
-  background-color: #0c0c0c !important;
-}
-
-.greedy-nav a {
-  color: #f3e5ab !important;
-}
-
-.greedy-nav a:hover {
-  color: #ffffff !important;
-}
-
-/* Sidebar Profile Styling */
-.author__avatar img {
-  border: 2px solid #d4af37 !important; /* Gold ring around profile photo */
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-}
-
-.author__name {
-  color: #d4af37 !important;
-}
-
-.author__urls a {
-  color: #d4af37 !important;
-}
-
-/* Headings (H1, H2, H3) */
-h1, h2, h3, h4, h5, h6, 
-.page__title {
-  color: #d4af37 !important;
-  border-bottom-color: #2a2a2a !important;
-}
-
-/* Buttons (e.g., CV download, Paper links) */
-.btn--primary, 
-.btn--info,
-.btn {
-  background-color: #d4af37 !important;
-  color: #000000 !important; /* Dark text on gold button */
-  font-weight: bold;
-  border: none !important;
-}
-
-.btn:hover {
-  background-color: #f3e5ab !important;
-  color: #000000 !important;
-}
-
-/* Code blocks & Callout cards */
-code, pre, .notice, .notice--info {
-  background-color: #1a1a1a !important;
-  border-left: 4px solid #d4af37 !important;
   color: #e0e0e0 !important;
+
+  .page__content, .sidebar, .masthead, .greedy-nav, .page__footer {
+    background-color: #0c0c0c !important;
+    color: #e0e0e0 !important;
+  }
+
+  /* Gold Links */
+  a {
+    color: #d4af37 !important;
+  }
+  a:hover {
+    color: #f3e5ab !important;
+  }
+
+  /* Headings & Dividers */
+  h1, h2, h3, h4, h5, h6, .page__title {
+    color: #d4af37 !important;
+    border-bottom-color: #2a2a2a !important;
+  }
+
+  .masthead {
+    border-bottom: 2px solid #d4af37 !important;
+  }
+
+  /* Profile Avatar */
+  .author__avatar img {
+    border: 2px solid #d4af37 !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+
+  /* Navigation & Sidebar Links */
+  .greedy-nav a, .author__name, .author__urls a {
+    color: #d4af37 !important;
+  }
+
+  /* Buttons */
+  .btn, .btn--primary, .btn--info {
+    background-color: #d4af37 !important;
+    color: #000000 !important;
+  }
+
+  /* Code & Notices */
+  code, pre, .notice, .notice--info {
+    background-color: #1a1a1a !important;
+    border-left: 4px solid #d4af37 !important;
+    color: #e0e0e0 !important;
+  }
+}
+
+/* ==========================================================================
+   LIGHT THEME OVERRIDES (WARM WHITE & DEEP BROWN/GOLD)
+   ========================================================================== */
+html.light, 
+body.light, 
+[data-theme="light"] {
+  background-color: #fcfbf7 !important; /* Soft warm ivory white */
+  color: #2b2520 !important;             /* Dark espresso brown text */
+
+  .page__content, .sidebar, .masthead, .greedy-nav, .page__footer {
+    background-color: #fcfbf7 !important;
+    color: #2b2520 !important;
+  }
+
+  /* Deep Warm Gold Links */
+  a {
+    color: #996515 !important; /* Rich deep gold / bronze */
+  }
+  a:hover {
+    color: #d4af37 !important;
+  }
+
+  /* Headings & Dividers */
+  h1, h2, h3, h4, h5, h6, .page__title {
+    color: #5c3a21 !important; /* Warm dark brown headers */
+    border-bottom-color: #e2d8cd !important;
+  }
+
+  .masthead {
+    border-bottom: 2px solid #b8860b !important;
+  }
+
+  /* Profile Avatar */
+  .author__avatar img {
+    border: 2px solid #b8860b !important;
+    box-shadow: 0 0 8px rgba(184, 134, 11, 0.2);
+  }
+
+  /* Navigation & Sidebar Links */
+  .greedy-nav a, .author__name, .author__urls a {
+    color: #5c3a21 !important;
+  }
+
+  /* Buttons */
+  .btn, .btn--primary, .btn--info {
+    background-color: #5c3a21 !important;
+    color: #ffffff !important;
+  }
+
+  /* Code & Notices */
+  code, pre, .notice, .notice--info {
+    background-color: #f2ede4 !important;
+    border-left: 4px solid #996515 !important;
+    color: #2b2520 !important;
+  }
 }
