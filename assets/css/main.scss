@@ -3,6 +3,7 @@
 
 /*
  * Main SCSS file for Vikas Yadav Academic Profile
+ * Includes custom sliding toggle switch and Black & Gold / Warm Light themes.
  */
 
 @import
@@ -35,12 +36,71 @@
 ;
 
 /* ==========================================================================
+   CUSTOM SLIDING TOGGLE SWITCH STYLING
+   ========================================================================== */
+
+/* Container for the theme switch link in the navigation bar */
+.greedy-nav .theme-toggle,
+a[href*="javascript:toggleTheme"],
+a.theme-toggle {
+  position: relative !important;
+  display: inline-block !important;
+  width: 52px !important;
+  height: 26px !important;
+  background-color: #222222 !important;
+  border: 1.5px solid #d4af37 !important;
+  border-radius: 20px !important;
+  text-indent: -9999px !important; /* Hide original text */
+  cursor: pointer !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+  vertical-align: middle !important;
+  margin-left: 10px !important;
+}
+
+/* Sliding Knob */
+.greedy-nav .theme-toggle::after,
+a[href*="javascript:toggleTheme"]::after,
+a.theme-toggle::after {
+  content: "🌙" !important;
+  position: absolute !important;
+  top: 1px !important;
+  left: 2px !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #d4af37 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11px !important;
+  text-indent: 0 !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
+}
+
+/* Light Theme Slider Position (Glides to the Right) */
+html.light .greedy-nav .theme-toggle,
+html.light a[href*="javascript:toggleTheme"],
+html.light a.theme-toggle {
+  background-color: #e2d8cd !important;
+  border-color: #996515 !important;
+}
+
+html.light .greedy-nav .theme-toggle::after,
+html.light a[href*="javascript:toggleTheme"]::after,
+html.light a.theme-toggle::after {
+  content: "☀️" !important;
+  transform: translateX(24px) !important; /* Slide animation */
+  background-color: #5c3a21 !important;
+}
+
+
+/* ==========================================================================
    DEFAULT / DARK THEME (BLACK & GOLD)
    ========================================================================== */
 body, 
 :root,
 html:not(.light) {
-  /* Pitch Black Background & Off-White Text */
   background-color: #0c0c0c !important;
   color: #e0e0e0 !important;
 
@@ -50,10 +110,10 @@ html:not(.light) {
   }
 
   /* Gold Links */
-  a {
+  a:not(.theme-toggle) {
     color: #d4af37 !important;
   }
-  a:hover {
+  a:not(.theme-toggle):hover {
     color: #f3e5ab !important;
   }
 
@@ -98,8 +158,8 @@ html:not(.light) {
 html.light, 
 body.light, 
 [data-theme="light"] {
-  background-color: #fcfbf7 !important; /* Soft warm ivory white */
-  color: #2b2520 !important;             /* Dark espresso brown text */
+  background-color: #fcfbf7 !important;
+  color: #2b2520 !important;
 
   .page__content, .sidebar, .masthead, .greedy-nav, .page__footer {
     background-color: #fcfbf7 !important;
@@ -107,16 +167,16 @@ body.light,
   }
 
   /* Deep Warm Gold Links */
-  a {
-    color: #996515 !important; /* Rich deep gold / bronze */
+  a:not(.theme-toggle) {
+    color: #996515 !important;
   }
-  a:hover {
+  a:not(.theme-toggle):hover {
     color: #d4af37 !important;
   }
 
   /* Headings & Dividers */
   h1, h2, h3, h4, h5, h6, .page__title {
-    color: #5c3a21 !important; /* Warm dark brown headers */
+    color: #5c3a21 !important;
     border-bottom-color: #e2d8cd !important;
   }
 
