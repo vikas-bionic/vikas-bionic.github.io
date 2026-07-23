@@ -6,6 +6,9 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 
+# Navbar interactive icon: cat | dna | robot | emoji
+nav_icon: "dna"
+
 # Basic Site Settings
 locale                  : "en-US"
 site_theme               : "earthy" # Options: "default", "air", "sunrise", "mint", "dirt", "contrast", "earthy"
