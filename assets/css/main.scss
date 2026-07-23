@@ -2,15 +2,15 @@
 ---
 
 /*
- * Main SCSS file for Vikas Yadav Academic Profile
+ * Main SCSS file for Academicpages
  */
 
 @import
     "vendor/breakpoint/breakpoint",
 
     "themes",
-    "theme/contrast_dark",
-    "theme/contrast_light",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
     "include/mixins",
     "vendor/susy/susy",
@@ -34,68 +34,3 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
-
-/* ==========================================================================
-   ANIMATED SLIDING TOGGLE SWITCH
-   ========================================================================== */
-
-/* Outer Pill Container */
-a#theme-toggle,
-.theme-toggle,
-a[onclick*="toggleTheme"],
-.greedy-nav .theme-toggle {
-  position: relative !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  width: 48px !important;
-  height: 24px !important;
-  background-color: #1a1a1a !important;
-  border: 1.5px solid #d4af37 !important;
-  border-radius: 20px !important;
-  font-size: 0 !important; /* Hide original text */
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  vertical-align: middle !important;
-  margin-left: 10px !important;
-  padding: 0 !important;
-}
-
-/* Sliding Knob (Default Dark: Moon) */
-a#theme-toggle::after,
-.theme-toggle::after,
-a[onclick*="toggleTheme"]::after {
-  content: "🌙" !important;
-  position: absolute !important;
-  top: 1px !important;
-  left: 2px !important;
-  width: 18px !important;
-  height: 18px !important;
-  background-color: #d4af37 !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 10px !important;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease !important;
-}
-
-/* Light Theme Activated: Slide Right & Sun Icon */
-html[data-theme="light"] a#theme-toggle,
-html[data-theme="light"] .theme-toggle,
-html[data-theme="light"] a[onclick*="toggleTheme"] {
-  background-color: #e2d8cd !important;
-  border-color: #996515 !important;
-}
-
-html[data-theme="light"] a#theme-toggle::after,
-html[data-theme="light"] .theme-toggle::after,
-html[data-theme="light"] a[onclick*="toggleTheme"]::after {
-  content: "☀️" !important;
-  transform: translateX(22px) !important;
-  background-color: #5c3a21 !important;
-}
-
-/* Profile Photo Gold Accent Ring */
-.author__avatar img {
-  border: 2px solid var(--global-base-color) !important;
-}
