@@ -17,3 +17,5 @@ main:
     url: /portfolio/
   - title: "CV"
     url: /files/Vikas_CV2.pdf
+  - title: "Contact"
+    url: /contact/
