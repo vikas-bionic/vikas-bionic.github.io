@@ -3,7 +3,8 @@ permalink: /
 title: "Vikas Yadav"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+show_news: true
+redirect_from:
   - /about/
   - /about.html
 ---
