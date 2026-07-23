@@ -170,7 +170,10 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   }
 }
 
-#nav-cat {
+#nav-cat,
+#nav-dna,
+#nav-robot,
+#nav-emoji {
   overflow: visible;
 }
 
@@ -183,12 +186,17 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 }
 
 @keyframes cat-blink {
-  0%, 92%, 100% {
-    transform: scaleY(0);
-  }
-  95% {
-    transform: scaleY(1);
-  }
+  0%, 92%, 100% { transform: scaleY(0); }
+  95% { transform: scaleY(1); }
+}
+
+#robot-scan {
+  animation: robot-scan-sweep 2.4s ease-in-out infinite;
+}
+
+@keyframes robot-scan-sweep {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(24px); }
 }
 .greedy-nav .visible-links {
   display: inline-flex;
