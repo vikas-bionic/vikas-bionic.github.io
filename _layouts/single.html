@@ -18,6 +18,11 @@ layout: default
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if page.collection == "portfolio" %}
+      <a href="{{ base_path }}/portfolio/" class="archive__back-link"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Research &amp; Projects</a>
+    {% elsif page.collection == "publications" %}
+      <a href="{{ base_path }}/publications/" class="archive__back-link"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Publications</a>
+    {% endif %}
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
