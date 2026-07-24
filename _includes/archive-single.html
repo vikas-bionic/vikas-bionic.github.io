@@ -16,6 +16,11 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
+        {% if post.collection == "portfolio" and post.duration %}
+          <span class="portfolio__status-tag portfolio__status-tag--{{ post.status | default: "active" }}">
+            {{ post.duration }} · {{ post.status | default: "Active" | capitalize }}
+          </span>
+        {% endif %}
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
