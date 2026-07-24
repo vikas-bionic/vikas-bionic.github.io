@@ -204,35 +204,42 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 }
 
 /* --- News & Updates widget ---
-   Sits stacked (full width) below the page content on small/medium screens.
-   On large screens, .news-widget-fixed-wrap is a fixed, full-viewport-width
-   layer that exactly mirrors #main's own box model (same padding, same
-   max-width/centering at $x-large) — so its right edge always lines up with
-   #main's right edge, which is where the article's empty gutter sits. The
-   actual widget then sits inside it, pinned to that right edge, and never
-   scrolls out of view because the whole thing is position: fixed. */
-.news-widget-fixed-wrap {
-  @include breakpoint($large) {
-    position: fixed;
-    top: calc(#{$masthead-height} + 1.5em);
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 0 auto;
-    pointer-events: none;
-    z-index: 20;
+   On pages with show_news, #main gets a "main--with-news" class. Your
+   .sidebar (bio/photo) is already position: fixed at this breakpoint (see
+   _sass/layout/_sidebar.scss), so it's out of normal flow — the two things
+   that actually need arranging are the article and the news widget. Turning
+   #main into a flex row for just this case lets the article take up exactly
+   whatever room is left after the sidebar clearance and the widget's width —
+   no overlap, no leftover dead margin, at any window size. */
+@include breakpoint($large) {
+  #main.main--with-news {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5em;
+  }
 
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
+  #main.main--with-news .page {
+    float: none;
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0; // allows the flex item to shrink below its content's natural width
+    margin-left: calc(#{$sidebar-link-max-width} + 3em);
+    margin-right: 0;
   }
 }
 
 .news-widget-wrap {
   margin-top: 2em;
   margin-bottom: 2em;
+
+  @include breakpoint($large) {
+    flex: 0 0 280px;
+    width: 280px;
+    margin: 0;
+    position: sticky;
+    top: calc(#{$masthead-height} + 1.5em);
+  }
+}
 
   @include breakpoint($large) {
     position: absolute;
