@@ -205,18 +205,43 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 
 /* --- News & Updates widget ---
    Sits stacked (full width) below the page content on small/medium screens.
-   On large screens, assets/js/news-widget.js measures the real empty gutter
-   beside the article and pins the widget there with position: fixed, so it
-   both sits in the right spot AND never scrolls out of view. */
+   On large screens, .news-widget-fixed-wrap is a fixed, full-viewport-width
+   layer that exactly mirrors #main's own box model (same padding, same
+   max-width/centering at $x-large) — so its right edge always lines up with
+   #main's right edge, which is where the article's empty gutter sits. The
+   actual widget then sits inside it, pinned to that right edge, and never
+   scrolls out of view because the whole thing is position: fixed. */
+.news-widget-fixed-wrap {
+  @include breakpoint($large) {
+    position: fixed;
+    top: calc(#{$masthead-height} + 1.5em);
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0 auto;
+    pointer-events: none;
+    z-index: 20;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+}
+
 .news-widget-wrap {
   margin-top: 2em;
   margin-bottom: 2em;
-  z-index: 5;
 
-  &.news-widget-wrap--pinned {
-    position: fixed;
-    top: calc(#{$masthead-height} + 1.5em);
+  @include breakpoint($large) {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    width: 16%;
+    min-width: 190px;
     margin: 0;
+    pointer-events: auto;
   }
 }
 
