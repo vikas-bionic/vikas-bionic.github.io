@@ -238,7 +238,7 @@ html[data-theme="dark"] .theme-switch__icon--moon {
     position: absolute;
     top: 0;
     right: 1em;
-    width: 16%;
+    width: 22%;
     min-width: 240px;
     max-width: 300px;
     margin: 0;
@@ -255,7 +255,7 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 
 /* fixed-height viewport showing ~4 items, with the list looping through inside it */
 .news-widget__scroll {
-  height: 230px;
+  height: 400px;
   overflow: hidden;
   position: relative;
   mask-image: linear-gradient(to bottom, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
