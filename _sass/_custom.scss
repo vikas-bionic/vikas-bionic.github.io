@@ -205,9 +205,10 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 
 /* --- News & Updates widget ---
    Sits stacked (full width) below the page content on small/medium screens.
-   On large screens it moves into the reserved right-hand gutter next to the
+   On large screens it floats into the reserved right-hand gutter next to the
    article text (the .page layout only uses 10 of 12 columns, leaving the
-   remaining 2 columns empty — this widget occupies that space). */
+   remaining 2 columns empty — this widget occupies that space), and sticks
+   in place while the page scrolls. */
 #main {
   position: relative;
 }
@@ -217,11 +218,11 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   margin-bottom: 2em;
 
   @include breakpoint($large) {
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: right;
     width: 17%;
     margin-top: 0;
+    position: sticky;
+    top: calc(#{$masthead-height} + 1.5em);
   }
 }
 
@@ -232,9 +233,32 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   color: var(--global-base-color);
 }
 
+/* fixed-height viewport showing ~4 items, with the list looping through inside it */
+.news-widget__scroll {
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+}
+
+.news-widget__track {
+  animation: news-widget-scroll 20s linear infinite;
+}
+
+/* pause the scroll while the reader's mouse is over it */
+.news-widget__scroll:hover .news-widget__track {
+  animation-play-state: paused;
+}
+
+@keyframes news-widget-scroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
 .news-widget__list {
   list-style: none;
-  margin: 0 0 1em 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -277,6 +301,7 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   display: inline-block;
   width: 100%;
   text-align: center;
+  margin-top: 1em;
 }
 /* --- Slim footer bar (Follow/GitHub/Feed section removed, just copyright + last updated) --- */
 .page__footer {
