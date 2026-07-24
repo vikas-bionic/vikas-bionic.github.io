@@ -222,12 +222,24 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   #main.main--with-news .page {
     float: none;
     width: auto;
-    flex: 1 1 auto;
-    min-width: 0; // allows the flex item to shrink below its content's natural width
-    margin-left: calc(#{$sidebar-link-max-width} + 3em);
+    flex: 1 1 0%; // basis 0 so flex-grow alone decides the size (ignores old content width)
+    min-width: 0;
+    margin-left: calc(#{$sidebar-link-max-width} + 2em);
+    margin-right: 1.5em;
+  }
+
+  // the inner wrap/content/meta/share use Susy's full() mixin, which locks
+  // them to a fixed px width tied to the old grid — override to just fill .page
+  #main.main--with-news .page .page__inner-wrap,
+  #main.main--with-news .page .page__content,
+  #main.main--with-news .page .page__meta,
+  #main.main--with-news .page .page__share {
+    width: 100%;
+    max-width: 100%;
+    float: none;
+    margin-left: 0;
     margin-right: 0;
   }
-}
 
 .news-widget-wrap {
   margin-top: 2em;
