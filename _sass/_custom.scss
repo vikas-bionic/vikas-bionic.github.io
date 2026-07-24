@@ -205,25 +205,97 @@ html[data-theme="dark"] .theme-switch__icon--moon {
 
 /* --- News & Updates widget ---
    Sits stacked (full width) below the page content on small/medium screens.
-   On large screens it floats into the reserved right-hand gutter next to the
-   article text (the .page layout only uses 10 of 12 columns, leaving the
-   remaining 2 columns empty — this widget occupies that space), and sticks
-   in place while the page scrolls. */
-#main {
-  position: relative;
-}
-
+   On large screens, assets/js/news-widget.js measures the real empty gutter
+   beside the article and pins the widget there with position: fixed, so it
+   both sits in the right spot AND never scrolls out of view. */
 .news-widget-wrap {
   margin-top: 2em;
   margin-bottom: 2em;
+  z-index: 5;
 
-  @include breakpoint($large) {
-    float: right;
-    width: 17%;
-    margin-top: 0;
-    position: sticky;
+  &.news-widget-wrap--pinned {
+    position: fixed;
     top: calc(#{$masthead-height} + 1.5em);
+    margin: 0;
   }
+}
+
+.news-widget__title {
+  font-size: $type-size-5;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--global-base-color);
+}
+
+/* fixed-height viewport showing ~4 items, with the list looping through inside it */
+.news-widget__scroll {
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+}
+
+.news-widget__track {
+  animation: news-widget-scroll 20s linear infinite;
+}
+
+/* pause the scroll while the reader's mouse is over it */
+.news-widget__scroll:hover .news-widget__track {
+  animation-play-state: paused;
+}
+
+@keyframes news-widget-scroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.news-widget__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-widget__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news-widget__icon {
+  color: var(--global-base-color);
+  margin-top: 0.2em;
+  flex-shrink: 0;
+}
+
+.news-widget__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-widget__link {
+  font-size: $type-size-6;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.news-widget__date {
+  font-size: $type-size-7;
+  color: var(--global-text-color-light, gray);
+  margin-top: 0.2em;
+}
+
+.news-widget__viewall {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
 }
 /* --- Slim footer bar (Follow/GitHub/Feed section removed, just copyright + last updated) --- */
 .page__footer {
