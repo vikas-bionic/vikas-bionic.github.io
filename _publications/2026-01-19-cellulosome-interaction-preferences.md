@@ -1,6 +1,7 @@
 ---
 title: "Exploring differential interactional preferences of enzyme-bearing dockerins for cohesin domains in the Clostridium thermocellum cellulosome"
 collection: publications
+category: manuscripts
 permalink: /publications/2026-01-19-cellulosome-interaction-preferences
 date: 2026-01-19
 venue: 'bioRxiv (Pre-print)'
