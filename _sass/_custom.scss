@@ -107,6 +107,27 @@
   background: rgba(90, 90, 90, 0.85);
 }
 
+/* Stack portfolio/publication tiles in a single column instead of
+   the theme's default multi-column masonry grid */
+.grid__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.grid__wrapper .grid__item {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+
+/* Give the teaser box a real height even before an image is uploaded,
+   so the status badge doesn't look like a stray stretched bar */
+.archive__item-teaser {
+  min-height: 160px;
+  background: rgba(120, 120, 120, 0.08);
+}
+
 /* --- Theme toggle as a slider switch --- */
 .theme-switch {
   position: relative;
