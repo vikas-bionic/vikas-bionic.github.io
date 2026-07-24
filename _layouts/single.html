@@ -14,7 +14,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<div id="main" role="main"{% if page.show_news %} class="main--with-news"{% endif %}>
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
@@ -94,13 +94,11 @@ layout: default
   </article>
 
   {% if page.show_news %}
-    <div class="news-widget-fixed-wrap">
-      <aside class="news-widget-wrap">
-        {% include news-widget.html %}
-      </aside>
-    </div>
+    <aside class="news-widget-wrap">
+      {% include news-widget.html %}
+    </aside>
   {% endif %}
-
+  
   {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
