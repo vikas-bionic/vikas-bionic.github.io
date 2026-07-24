@@ -226,6 +226,8 @@ html[data-theme="dark"] .theme-switch__icon--moon {
     min-width: 0;
     margin-left: calc(#{$sidebar-link-max-width} + 2em);
     margin-right: 1.5em;
+    padding-left: 0;   // Susy's prefix() mixin sets this as padding, not margin — cancel it
+    padding-right: 0;  // Susy's suffix() mixin sets this as padding, not margin — cancel it
   }
 
   // the inner wrap/content/meta/share use Susy's full() mixin, which locks
