@@ -354,6 +354,17 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   line-height: 1.5;
 }
 
+.archive__back-link {
+  display: inline-block;
+  margin-bottom: 1.25em;
+  font-size: $type-size-6;
+  font-weight: 600;
+  color: var(--global-text-color-light);
+
+  &:hover {
+    color: var(--global-base-color);
+  }
+}
 /* --- Justified body text across the site --- */
 .page__content p,
 .archive__item-excerpt {
