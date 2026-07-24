@@ -12,7 +12,7 @@ author_profile: true
     <i class="fas {{ item.icon | default: 'fa-circle-dot' }} news-widget__icon" aria-hidden="true"></i>
     <div class="news-widget__content">
       <a href="{{ item.url }}" class="news-widget__link">{{ item.title }}</a>
-      {% if item.date %}<span class="news-widget__date">{{ item.date | date: "%B %-d, %Y" }}</span>{% endif %}
+      {% if item.date %}<span class="news-widget__date">{{ item.date | date: "%b %Y" }}</span>{% endif %}
     </div>
   </li>
 {% endfor %}
