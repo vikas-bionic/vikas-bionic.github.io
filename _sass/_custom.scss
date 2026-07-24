@@ -157,7 +157,7 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   }
 }
 .masthead__tagline {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   width: auto;
   padding: 0 1.5em;
   display: flex;
@@ -198,6 +198,11 @@ html[data-theme="dark"] .theme-switch__icon--moon {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(24px); }
 }
+.greedy-nav {
+  display: flex;
+  justify-content: center;
+}
+
 .greedy-nav .visible-links {
   display: inline-flex;
   align-items: center;
